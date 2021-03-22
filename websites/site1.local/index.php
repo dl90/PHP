@@ -9,7 +9,7 @@ for ($index = 0; $index < $number_of_countries; $index++) {
     echo "$countries[$index] <br>";
 }
 
-unset ($countries[1]);
+unset($countries[1]);
 echo "<hr>After deleting:<br>";
 $number_of_countries = count($countries);
 for ($index = 0; $index < $number_of_countries; $index++) {
@@ -22,7 +22,7 @@ foreach ($countries as $c) {
 }
 
 // getting all $_POST data
-foreach ($_POST as $formData){
+foreach ($_POST as $formData) {
     echo "$formData<br>";
 }
 
@@ -35,8 +35,8 @@ var_dump($countries);
 <hr>
 
 <form enctype="multipart/form-data" action="./index.php" method="post">
-    Send this file: <input type="file" name="userfile" >
-<input type="submit" value="Send File">
+    Send this file: <input type="file" name="userfile">
+    <input type="submit" value="Send File">
 </form>
 
 <hr>
@@ -52,9 +52,9 @@ var_dump($countries);
 if (!file_exists('./uploads/myfile.txt')) die('no file');
 
 $filehandle = fopen("./uploads/myfile.txt", "a");
-if ($filehandle =  @fopen("./uploads/myfile.txt", "a+")){
+if ($filehandle =  @fopen("./uploads/myfile.txt", "a+")) {
     echo "File successfully opened for reading/writing/creating/appending";
-}else{
+} else {
     echo "Error opening the file for reading/writing/creating/appending";
 }
 

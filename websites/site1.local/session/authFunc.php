@@ -13,7 +13,7 @@ define('USERS_DB', dirname(__FILE__).'/users.txt');
 function checkHash(string $username, string $password): int {
     $state = 3;
     if (strlen(rtrim($username)) == 0 || strlen(rtrim($password)) == 0 ) return 0;
-    if (!file_exists(USERS_DB)) return state;
+    if (!file_exists(USERS_DB)) return $state;
 
     $pwHash = md5($password);
     $fileHandel = fopen(USERS_DB, 'r+');

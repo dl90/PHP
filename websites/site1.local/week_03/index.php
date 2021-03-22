@@ -1,15 +1,4 @@
 <?php
-/*
-    File: login.php
-
-    Lab 3 assignment
-    Several get request forms with feedback for correct/incorrect input
-    using regex to check for specific formats.
-
-    Authors: Cindy Le, Don Li
-    Last modified Jan 27, 2021
-*/
-
     $PHONE_ERROR_MESSAGE = null;
     $LICENSE_ERROR_MESSAGE = null;
     $ADDRESS_ERROR_MESSAGE = null;
@@ -90,7 +79,7 @@
 
 <hr>
 
-<p>Enter birthdate, format: MMM-DD-YYYY where MMM are three letters (e.g. Apr), and DD and YYYY are digits</p>
+<p>Enter birthday, format: MMM-DD-YYYY where MMM are three letters (e.g. Apr), and DD and YYYY are digits</p>
 <form action="./index.php" method="get">
     <label for="birthday">Birthday</label>
     <input id="birthday" name="birthday" type="text">
@@ -127,6 +116,4 @@
 
 <?php
 
-if (isset($_POST['birthplace'])) {
-    print_r($_POST['birthplace']);
-}
+if (isset($_POST['birthplace'])) print_r($_POST['birthplace']);

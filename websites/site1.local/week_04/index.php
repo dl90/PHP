@@ -1,7 +1,5 @@
 <?php
 
-//phpinfo();
-
 //header("Content-type: image/png");
 $image = ImageCreateTrueColor(900, 900);
 $red = ImageColorAllocate($image, 255, 0, 0);

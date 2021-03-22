@@ -8,7 +8,6 @@
             echo "hi " . $_GET['username'];
             die();
         }
-
     }
 
     $s = "hello world";
@@ -24,7 +23,7 @@
         " evaluates the values
         ' outputs as is
 
-        " and $ needs to be escaped inside ""
+        " and $ needs to be escaped inside "\""
     */
 
     $x = "hello";
@@ -54,7 +53,7 @@
     sql injection checks
 
     get: visible in URL, not secure, cached heavily, max 2048, must be URL safe
-    post: not visible in URL, not secure (https), not cached, no size limit, binary data
+    post: not visible in URL, not secure (unless https), not cached, no size limit, binary data
 -->
 <?php
 
@@ -77,6 +76,7 @@ echo $arr[2];
 echo '<br>';
 echo count($arr);
 echo '<hr>';
+
 ?>
 <form action="./test.php" method="post">
     <input type="text" name="test">

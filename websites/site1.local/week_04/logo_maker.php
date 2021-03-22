@@ -1,15 +1,4 @@
 <?php
-/*
-    File: logo_maker.php
-
-    Lab 4
-    Creates basic logo based on user of business name, business description abd business type
-    User can save the logo in png/jpg format
-
-    Authors: Daniel Na, Don Li
-    Last modified Feb 1, 2021
-*/
-
 $BUSINESS_TYPES = ['pet', 'finance', 'food', 'education', 'design'];
 $BUSINESS_NAME_ERROR = false;
 $BUSINESS_DESC_ERROR = false;
@@ -26,15 +15,13 @@ if (isset($_GET['desc'])) {
 }
 
 ?>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <div class="d-flex justify-content-center p-3">
-        <h1>Logo Maker</h1>
-    </div>
-    <div class="container p-3">
-        <form action="logo_maker.php" method="get"
-        ">
+<div class="d-flex justify-content-center p-3">
+    <h1>Logo Maker</h1>
+</div>
+<div class="container p-3">
+    <form action="logo_maker.php" method="get">
         <div class="mb-3">
             <label for="name" class="form-label">Business Name:</label>
             <input type="text" name="name" id="name" class="form-control">
@@ -55,8 +42,8 @@ if (isset($_GET['desc'])) {
             </select>
         </div>
         <input type="submit" class="btn btn-primary">
-        </form>
-    </div>
+    </form>
+</div>
 
 <?php
 $LOGO_SIZE = 512;
@@ -95,7 +82,7 @@ if (isset($_GET['type'])) {
 
     $jpg = imagecreatetruecolor($LOGO_SIZE, $LOGO_SIZE);
     $white = imagecolorallocate($jpg,  255, 255, 255);
-    imagefill($jpg, 0,0, $white);
+    imagefill($jpg, 0, 0, $white);
     imagecopy($jpg, $logo, 0, 0, 0, 0, $LOGO_SIZE, $LOGO_SIZE);
     imagejpeg($jpg, './out/temp.jpg');
 

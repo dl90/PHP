@@ -1,5 +1,4 @@
 <?php
-
 $image = ImageCreateTrueColor(1000, 500);
 
 $red = ImageColorAllocate($image, 255, 0, 0);
@@ -22,6 +21,7 @@ foreach ($COLORS as $color) {
     if ($arc_width > 0) $arc_width -= 100;
     if ($arc_height > 0) $arc_height -= 100;
 }
+
 ImagePng($image, "rainbow.png");
 ImageDestroy($image);
 

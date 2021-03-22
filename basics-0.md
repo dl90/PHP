@@ -75,4 +75,11 @@ $split =  preg_split('/,/', "abc,def,ghi,jkl");
 preg_match('/^fo{2,}$/', 'foo', $matchArr); // match first
 preg_match_all('/^b(ar)?$/', 'bararar', $matchArr); // match all
 $newStr = preg_replace('/foo/', 'bar', 'foo foo foo');
+
+// parsing cli input
+$input = trim(fgets(STDIN));
+fprintf(STDOUT, $input);
+exit;
+
+var_dump($argv); // arg vector $argv[0] => script name
 ```
